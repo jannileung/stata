@@ -1,4 +1,10 @@
-*Compare means, if condition, over (bygroup);
+*Compare means;
 *..................................................................................................;
 
-  mean dvar if conditionvar==1, over(groupvar)
+*1 dv, if specific condition;
+  mean dv if conditionvar==1, over(groupvar)
+  
+  
+*3 dvs;
+	mean dv1 dv2 dv3, over(groupvar)
+
