@@ -1,0 +1,8 @@
+*Save result outputs into a log file;
+*..................................................................................................;
+
+log using C:\Users\PC\Downloads\Results_20181214.log, replace
+
+  <analyses>
+
+log close
