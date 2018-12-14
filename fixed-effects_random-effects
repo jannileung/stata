@@ -13,11 +13,11 @@
 *Linear;
 *..........................................................................................................................;
   *Fixed-effects;
-    xtreg dv iv time, fe
+    xtreg dv iv time if subgroup==1, fe
     estimate store fe
 
   *Random-effects;
-    xtreg dv iv time, re
+    xtreg dv iv time if subgroup==1, re
     estimate store  re
 
   *Hausman;
@@ -27,11 +27,11 @@
  *Logit;
 *..........................................................................................................................;
   *Fixed-effects;
-    xtlogit dv iv time, fe
+    xtlogit dv iv time if subgroup==1, fe
     estimate store fe
 
   *Random-effects;
-    xtlogit dv iv time, re
+    xtlogit dv iv time if subgroup==1, re
     estimate store  re
 
   *Hausman;
