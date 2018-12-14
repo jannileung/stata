@@ -1,0 +1,39 @@
+*Fixed effects and random-effects, with hausman test, on panel data;
+****************************************************************************************************************************;
+
+  *Participant data by year;
+  *..........................................................................................................................;
+          /*panel variable:  Participant_ID 
+          time variable:  time, 1 to 5 year of survey
+           delta:  1 year*/
+         
+	xtset Participant_ID time, yearly
+
+
+*Linear;
+*..........................................................................................................................;
+  *Fixed-effects;
+    xtreg dv iv time, fe
+    estimate store fe
+
+  *Random-effects;
+    xtreg dv iv time, re
+    estimate store  re
+
+  *Hausman;
+    hausman fe re
+	
+  
+ *Logit;
+*..........................................................................................................................;
+  *Fixed-effects;
+    xtlogit dv iv time, fe
+    estimate store fe
+
+  *Random-effects;
+    xtlogit dv iv time, re
+    estimate store  re
+
+  *Hausman;
+    hausman fe re
+	
