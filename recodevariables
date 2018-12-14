@@ -1,0 +1,14 @@
+*Recoding variables;
+******************************************************************************************************************;
+
+  gen newvar  = .
+    replace newvar  = 0 if oldvar == 0
+    replace newvar  = 0 if oldvar == -1
+    replace newvar  = 0 if oldvar == 99
+    replace newvar  = 1 if (oldvar >= 1) & (oldvar <= 10)
+
+
+   gen newvar = 1
+    replace newvar = 2 if oldvar >=150
+    replace newvar = 3 if oldvar >=300
+    replace newvar = . if oldvar  == .
