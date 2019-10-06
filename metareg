@@ -2,3 +2,5 @@
 *..................................................................................................................;
 
   metareg t_es_var moderator_var, wsse (se_var)
+  
+  xi: metareg t_es_var 	i.region_moderator, wsse(se_var) 
