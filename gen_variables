@@ -1,6 +1,10 @@
 *gen a list of variables;
-
-foreach v in mon tue wed thu fri sat sun  
-  {
-   gen 		total`v'=`v'a+`v'b+`v'c+`v'd
-  }
+*...................................................................................................;
+			foreach v in fri sat sun wkd { 
+      gen total`v'=`v'a+`v'b+`v'c 
+      }
+  
+  
+*gen based on max across a number of variables;
+*...................................................................................................;
+    gen max = max (totalmon, totaltue, totalwed, totalthu, totalfri, totalsat, totalsun)
