@@ -1,0 +1,6 @@
+*gen a list of variables;
+
+foreach v in mon tue wed thu fri sat sun  
+  {
+   gen 		total`v'=`v'a+`v'b+`v'c+`v'd
+  }
