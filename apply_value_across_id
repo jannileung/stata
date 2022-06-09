@@ -1,0 +1,21 @@
+/*
+*Example scenario:
+  *data is long;
+  *each participant have rows of data for each visit;
+  *in some visits, training was provided;
+  *aim is to keep only the participants with training;
+  
+*variables are: id is id, "trained" is 1 if trained, . if not trained;
+
+*Strategy is sort by id and trained, 
+  *then create a new variable called "trainedever" 
+      *1 for all rows of data for participants who ever were trained;
+*/
+
+
+*sort by id and trained (trained is 1 if trained, . if not trained);
+              bysort id (trained): gen trainedever = trained[1]
+              
+              
+*drop if trainedever is missing;
+              drop if trainedever == .
